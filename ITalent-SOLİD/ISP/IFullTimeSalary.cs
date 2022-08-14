@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ITalent_SOLİD.ISP
 {
-    internal interface IEmployee
+    internal interface IFullTimeSalary : IEmployee
     {
-        string Name { get; set; }
-        string Surname { get; set; }
+        int Salary { get; set; }
+        int Prize { get; set; }
+        public int CalculateSalary();
 
     }
 }
