@@ -14,12 +14,11 @@ namespace ITalent_SOLİD.DIP
         public Contact Contact { get; set; }
         public Order Order { get; set; }
 
+        INotificationSender INotificationSender { get; set; }
+
         public void GiveOrder(Order order,Customer customer)
         {
-            EmailSender emailSender = new EmailSender();
-            SmsSender smsSender = new SmsSender();
-            emailSender.MailSend(order, customer);
-            smsSender.SmsSend(order, customer);
+            INotificationSender.SendNotification(order, customer);
         }
     }
 }
