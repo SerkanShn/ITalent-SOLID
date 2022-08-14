@@ -22,8 +22,5 @@ namespace ITalent_SOLİD.LSP
             Console.WriteLine("Motor durduruldu");
         }
 
-        public abstract void OpenClimate();
-        public abstract void OpenSunroof();
-
     }
 }

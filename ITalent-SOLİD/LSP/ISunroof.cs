@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ITalent_SOLİD.LSP
 {
-    internal class Fiat : Car
+    internal interface ISunroof
     {
-
+        public void OpenSunroof();
     }
 }

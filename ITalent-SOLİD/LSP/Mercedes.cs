@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ITalent_SOLİD.LSP
 {
-    internal class Mercedes : Car
+    internal class Mercedes : Car,IClimate,ISunroof
     {
-        public override void OpenClimate()
+        public void OpenClimate()
         {
             Console.WriteLine("Klima açıldı");
         }
 
-        public override void OpenSunroof()
+        public void OpenSunroof()
         {
             Console.WriteLine("Sunroof açıldı");
         }
