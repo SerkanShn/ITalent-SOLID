@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ITalent_SOLİD.OCP
 {
-    internal class CreditCardPayment : IPaymentMethod
+    internal class BitcoinPayment : IPaymentMethod
     {
         public string MakePayment()
         {
-            return "Kredi kartı ile ödemesi yapıldı.";
+            return "Bitcoin ile ödemesi yapıldı.";
         }
+
     }
 }

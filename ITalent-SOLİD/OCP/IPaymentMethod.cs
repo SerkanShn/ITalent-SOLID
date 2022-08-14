@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace ITalent_SOLİD.OCP
 {
-    internal class CashPayment : IPaymentMethod
+    internal interface IPaymentMethod
     {
-        public string MakePayment()
-        {
-            return "Nakit ödemesi yapıldı.";
-        }
+        public string MakePayment();
     }
-
 }

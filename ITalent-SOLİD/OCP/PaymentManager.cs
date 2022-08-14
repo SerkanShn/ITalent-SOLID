@@ -8,15 +8,17 @@ namespace ITalent_SOLİD.OCP
 {
     internal class PaymentManager
     {
-        CashPayment cashPayment = new CashPayment();
-        CreditCardPayment creditCardPayment = new CreditCardPayment();
-        TransferPayment transferPayment = new TransferPayment();
-        public string MakeThePayment(string type) => type switch
+        IPaymentMethod paymentMethod;
+
+        public PaymentManager(IPaymentMethod paymentMethod)
         {
-            "cash" => cashPayment.MakePayment(),
-            "creditcard" => creditCardPayment.MakePayment(),
-            "transfer" => transferPayment.MakePayment(),
-        };
+            this.paymentMethod = paymentMethod;
+        }
+
+        public string MakeThePayment() 
+        {
+            return paymentMethod.MakePayment();
+        }
 
     }
 }

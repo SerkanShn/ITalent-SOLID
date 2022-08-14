@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITalent_SOLİD.OCP
 {
-    internal class TransferPayment
+    internal class TransferPayment : IPaymentMethod
     {
         public string MakePayment()
         {
